@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>汽车涂料智能配色论文跟踪</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div>
+          <h1>汽车涂料智能配色论文跟踪</h1>
+          <p>Color matching · Automotive coatings · Deep learning</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="exportBtn" class="icon-button" type="button" title="导出 JSON" aria-label="导出 JSON">
+          <span aria-hidden="true">↓</span>
+        </button>
+        <label class="icon-button" title="导入 JSON" aria-label="导入 JSON">
+          <span aria-hidden="true">↑</span>
+          <input id="importInput" type="file" accept="application/json" />
+        </label>
+        <button id="resetBtn" class="icon-button" type="button" title="恢复种子数据" aria-label="恢复种子数据">
+          <span aria-hidden="true">↺</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="toolbar" aria-label="检索和筛选">
+        <label class="search-box">
+          <span>检索</span>
+          <input id="searchInput" type="search" placeholder="标题、作者、关键词、笔记" />
+        </label>
+        <label>
+          <span>主题</span>
+          <select id="topicFilter"></select>
+        </label>
+        <label>
+          <span>类型</span>
+          <select id="typeFilter"></select>
+        </label>
+        <label>
+          <span>状态</span>
+          <select id="statusFilter"></select>
+        </label>
+        <label>
+          <span>排序</span>
+          <select id="sortSelect">
+            <option value="year-desc">年份新到旧</option>
+            <option value="relevance-desc">相关度高到低</option>
+            <option value="status">阅读状态</option>
+            <option value="title">标题</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="overview-grid" aria-label="跟踪概览">
+        <article class="metric">
+          <span id="totalCount">0</span>
+          <p>条目总数</p>
+        </article>
+        <article class="metric">
+          <span id="queueCount">0</span>
+          <p>待读/精读</p>
+        </article>
+        <article class="metric">
+          <span id="latestYear">-</span>
+          <p>最新年份</p>
+        </article>
+        <article class="signal-panel">
+          <div class="mini-spectrum" aria-hidden="true">
+            <i style="height: 26%"></i><i style="height: 52%"></i><i style="height: 72%"></i>
+            <i style="height: 48%"></i><i style="height: 34%"></i><i style="height: 62%"></i>
+          </div>
+          <div>
+            <strong>跟踪主线</strong>
+            <p>K-M/光谱建模、多角度车漆测量、效果颜料识别、深度学习反推配方。</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <aside class="left-panel" aria-label="技术梳理">
+          <div class="section-title">
+            <h2>技术路线</h2>
+            <span id="activeSummary">全部主题</span>
+          </div>
+          <div id="topicMap" class="topic-map"></div>
+
+          <div class="section-title compact">
+            <h2>持续检索入口</h2>
+          </div>
+          <div id="searchLinks" class="search-links"></div>
+        </aside>
+
+        <section class="paper-area" aria-label="文献列表">
+          <div class="section-title">
+            <h2>文献与报告</h2>
+            <span id="resultCount">0 项</span>
+          </div>
+          <div id="paperList" class="paper-list"></div>
+        </section>
+
+        <aside class="right-panel" aria-label="条目详情和新增">
+          <div class="detail-panel">
+            <div class="section-title compact">
+              <h2>条目详情</h2>
+            </div>
+            <div id="detailView" class="detail-view"></div>
+          </div>
+
+          <form id="addForm" class="add-form">
+            <div class="section-title compact">
+              <h2>新增条目</h2>
+            </div>
+            <label>
+              <span>标题</span>
+              <input name="title" required />
+            </label>
+            <label>
+              <span>年份</span>
+              <input name="year" inputmode="numeric" pattern="[0-9]{4}" placeholder="2026" />
+            </label>
+            <label>
+              <span>链接</span>
+              <input name="url" type="url" placeholder="https://..." />
+            </label>
+            <label>
+              <span>主题</span>
+              <select name="topic">
+                <option>配方推荐</option>
+                <option>汽车涂料测色</option>
+                <option>光谱恢复</option>
+                <option>效果颜料识别</option>
+                <option>结构色/涂层反设计</option>
+                <option>生产过程</option>
+                <option>白皮书/报告</option>
+              </select>
+            </label>
+            <label>
+              <span>备注</span>
+              <textarea name="notes" rows="4" placeholder="为什么值得读、和业务的关系、待验证问题"></textarea>
+            </label>
+            <button type="submit">加入跟踪</button>
+          </form>
+        </aside>
+      </section>
+    </main>
+
+    <template id="paperTemplate">
+      <article class="paper-card">
+        <div class="paper-topline">
+          <span class="year"></span>
+          <span class="type"></span>
+          <span class="relevance"></span>
+        </div>
+        <h3></h3>
+        <p class="paper-meta"></p>
+        <p class="paper-note"></p>
+        <div class="tag-row"></div>
+        <div class="paper-actions">
+          <button class="select-paper" type="button">查看</button>
+          <a class="open-link" target="_blank" rel="noreferrer">来源</a>
+          <select class="status-select" aria-label="阅读状态">
+            <option>未读</option>
+            <option>待读</option>
+            <option>精读</option>
+            <option>已读</option>
+            <option>搁置</option>
+          </select>
+        </div>
+      </article>
+    </template>
+
+    <script src="./data/papers.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
