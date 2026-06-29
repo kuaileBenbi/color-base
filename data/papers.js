@@ -1,5 +1,5 @@
 window.LITERATURE_TRACKER_DATA = {
-  "generatedAt": "2026-06-24T07:23:47Z",
+  "generatedAt": "2026-06-29T02:13:54Z",
   "papers": [
     {
       "id": "spitzer-1996-auto-color-matching",
@@ -114,6 +114,25 @@ window.LITERATURE_TRACKER_DATA = {
       "externalId": "2409.07121v1"
     },
     {
+      "id": "arxiv-2310-01234v3-back-propagation-optimization-and-multi-valued-artificial-neu",
+      "title": "Back-Propagation Optimization and Multi-Valued Artificial Neural Networks for Highly Vivid Structural Color Filter Metasurfaces",
+      "authors": "Arthur Clini de Souza, Stéphane Lanteri, Hugo Enrique Hernandez-Figueroa, Marco Abbarchi, David Grosso, Badre Kerzabi, Mahmoud Elsawy",
+      "year": 2023,
+      "type": "预印本",
+      "topic": "结构色/涂层反设计",
+      "venue": "arXiv",
+      "url": "https://arxiv.org/abs/2310.01234v3",
+      "relevance": 3,
+      "status": "未读",
+      "tags": [
+        "deep learning",
+        "structural color"
+      ],
+      "notes": "自动发现：We introduce a novel technique for designing color filter metasurfaces using a data-driven approach based on deep learning. Our innovative approach employs inverse design principles to identify highly efficient designs t...",
+      "source": "arxiv",
+      "externalId": "2310.01234v3"
+    },
+    {
       "id": "paint-shop-sequencing-2022",
       "title": "Paint shop vehicle sequencing based on quantum computing considering color changeover and painting quality",
       "authors": "Jing Huang, Hua-Tzu Fan, Guoxian Xiao, Qing Chang",
@@ -171,8 +190,8 @@ window.LITERATURE_TRACKER_DATA = {
   ],
   "updateSummary": {
     "existingCount": 9,
-    "fetchedCount": 0,
-    "mergedCount": 9,
+    "fetchedCount": 44,
+    "mergedCount": 10,
     "errors": []
   }
 };
