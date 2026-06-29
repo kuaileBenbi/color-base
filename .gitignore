@@ -62,6 +62,8 @@ See 'git help git' for an overview of the system.
 *.json
 *.yaml
 *.yml
+!.github/workflows/*.yml
+!.github/workflows/*.yaml
 *.csv
 *.xlsx
 *.xls
