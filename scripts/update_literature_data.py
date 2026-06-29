@@ -21,8 +21,8 @@ from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parents[2]
-DATA_FILE = ROOT / "literature_tracker" / "data" / "papers.js"
+ROOT = Path(__file__).resolve().parents[1]
+DATA_FILE = ROOT / "data" / "papers.js"
 
 QUERY_GROUPS = [
     {
