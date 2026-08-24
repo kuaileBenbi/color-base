@@ -1,5 +1,5 @@
 window.LITERATURE_TRACKER_DATA = {
-  "generatedAt": "2026-08-17T02:39:35Z",
+  "generatedAt": "2026-08-24T02:44:11Z",
   "papers": [
     {
       "id": "spitzer-1996-auto-color-matching",
