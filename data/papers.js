@@ -1,5 +1,5 @@
 window.LITERATURE_TRACKER_DATA = {
-  "generatedAt": "2026-09-07T06:24:46Z",
+  "generatedAt": "2026-09-14T06:43:49Z",
   "papers": [
     {
       "id": "spitzer-1996-auto-color-matching",
@@ -190,8 +190,15 @@ window.LITERATURE_TRACKER_DATA = {
   ],
   "updateSummary": {
     "existingCount": 10,
-    "fetchedCount": 44,
+    "fetchedCount": 40,
     "mergedCount": 10,
-    "errors": []
+    "errors": [
+      "arxiv all:\"color matching\" AND all:\"automotive coatings\": HTTP Error 429: Unknown Error",
+      "arxiv all:\"automotive coatings\" AND all:\"deep learning\": The read operation timed out",
+      "arxiv all:\"automotive paint\" AND all:\"deep learning\": The read operation timed out",
+      "arxiv all:\"color recipe\" AND all:\"machine learning\": HTTP Error 429: Unknown Error",
+      "arxiv all:\"spectral reflectance\" AND all:\"deep learning\" AND all:color: The read operation timed out",
+      "arxiv all:\"structural color\" AND all:\"deep learning\": HTTP Error 429: Unknown Error"
+    ]
   }
 };
