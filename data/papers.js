@@ -1,5 +1,5 @@
 window.LITERATURE_TRACKER_DATA = {
-  "generatedAt": "2026-09-14T06:43:49Z",
+  "generatedAt": "2026-09-21T06:45:15Z",
   "papers": [
     {
       "id": "spitzer-1996-auto-color-matching",
@@ -19,6 +19,24 @@ window.LITERATURE_TRACKER_DATA = {
         "multi-angle"
       ],
       "notes": "汽车修补漆多角度测色配色的经典框架：便携式多角度分光光度计、数据库检索、喷板修正，并提出效果颜料可用神经网络/遗传算法/模糊逻辑识别。"
+    },
+    {
+      "id": "doi-10-1016-j-jmst-2026-08-076",
+      "title": "Design of strong anti-corrosion and high electrical conductivity protective bilayer coatings on bipolar plates in PEMWE cells by machine learning",
+      "authors": "Yuanjiang Lv, Qiaomei Luo, Guosong Gu, Shimeng Chen, Wenqian Sun, Jianping Gao, Gengrong Chang, Mingxia Liu",
+      "year": 2027,
+      "type": "论文",
+      "topic": "汽车涂料测色",
+      "venue": "Journal of Materials Science & Technology",
+      "url": "https://doi.org/10.1016/j.jmst.2026.08.076",
+      "relevance": 3,
+      "status": "未读",
+      "tags": [
+        "machine learning"
+      ],
+      "notes": "自动发现：待读摘要。",
+      "source": "crossref",
+      "externalId": "10.1016/j.jmst.2026.08.076"
     },
     {
       "id": "color-constancy-hsi-2026",
@@ -191,14 +209,14 @@ window.LITERATURE_TRACKER_DATA = {
   "updateSummary": {
     "existingCount": 10,
     "fetchedCount": 40,
-    "mergedCount": 10,
+    "mergedCount": 11,
     "errors": [
-      "arxiv all:\"color matching\" AND all:\"automotive coatings\": HTTP Error 429: Unknown Error",
-      "arxiv all:\"automotive coatings\" AND all:\"deep learning\": The read operation timed out",
-      "arxiv all:\"automotive paint\" AND all:\"deep learning\": The read operation timed out",
-      "arxiv all:\"color recipe\" AND all:\"machine learning\": HTTP Error 429: Unknown Error",
-      "arxiv all:\"spectral reflectance\" AND all:\"deep learning\" AND all:color: The read operation timed out",
-      "arxiv all:\"structural color\" AND all:\"deep learning\": HTTP Error 429: Unknown Error"
+      "arxiv all:\"color matching\" AND all:\"automotive coatings\": HTTP Error 406: Not Acceptable",
+      "arxiv all:\"automotive coatings\" AND all:\"deep learning\": HTTP Error 406: Not Acceptable",
+      "arxiv all:\"automotive paint\" AND all:\"deep learning\": HTTP Error 406: Not Acceptable",
+      "arxiv all:\"color recipe\" AND all:\"machine learning\": HTTP Error 406: Not Acceptable",
+      "arxiv all:\"spectral reflectance\" AND all:\"deep learning\" AND all:color: HTTP Error 406: Not Acceptable",
+      "arxiv all:\"structural color\" AND all:\"deep learning\": HTTP Error 406: Not Acceptable"
     ]
   }
 };
