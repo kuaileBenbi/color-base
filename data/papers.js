@@ -1,5 +1,5 @@
 window.LITERATURE_TRACKER_DATA = {
-  "generatedAt": "2026-09-21T06:45:15Z",
+  "generatedAt": "2026-09-28T07:17:28Z",
   "papers": [
     {
       "id": "spitzer-1996-auto-color-matching",
@@ -207,7 +207,7 @@ window.LITERATURE_TRACKER_DATA = {
     }
   ],
   "updateSummary": {
-    "existingCount": 10,
+    "existingCount": 11,
     "fetchedCount": 40,
     "mergedCount": 11,
     "errors": [
