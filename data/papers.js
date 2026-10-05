@@ -1,5 +1,5 @@
 window.LITERATURE_TRACKER_DATA = {
-  "generatedAt": "2026-09-28T07:17:28Z",
+  "generatedAt": "2026-10-05T07:25:08Z",
   "papers": [
     {
       "id": "spitzer-1996-auto-color-matching",
@@ -208,15 +208,8 @@ window.LITERATURE_TRACKER_DATA = {
   ],
   "updateSummary": {
     "existingCount": 11,
-    "fetchedCount": 40,
+    "fetchedCount": 44,
     "mergedCount": 11,
-    "errors": [
-      "arxiv all:\"color matching\" AND all:\"automotive coatings\": HTTP Error 406: Not Acceptable",
-      "arxiv all:\"automotive coatings\" AND all:\"deep learning\": HTTP Error 406: Not Acceptable",
-      "arxiv all:\"automotive paint\" AND all:\"deep learning\": HTTP Error 406: Not Acceptable",
-      "arxiv all:\"color recipe\" AND all:\"machine learning\": HTTP Error 406: Not Acceptable",
-      "arxiv all:\"spectral reflectance\" AND all:\"deep learning\" AND all:color: HTTP Error 406: Not Acceptable",
-      "arxiv all:\"structural color\" AND all:\"deep learning\": HTTP Error 406: Not Acceptable"
-    ]
+    "errors": []
   }
 };
